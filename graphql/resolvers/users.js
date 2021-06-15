@@ -8,21 +8,21 @@ function generateToken(user) {
     return jwt.sign({
         id: user.id,
         email: user.email,
-        username: user.username
-    }, process.env.SECRET_KEY, { expiresIn: '6h' });
+        name: user.name
+    }, process.env.SECRET_KEY, { expiresIn: '7d' });
 };
 
 module.exports = {
     Mutation: {
         // USER LOGIN
-        async login(_, { username, password }) {
-            const {errors, valid} = validateLoginInput(username, password)
+        async login(_, { email, password }) {
+            const {errors, valid} = validateLoginInput(email, password)
 
             if (!valid) {
                 throw new UserInputError('Errors', { errors })
             }
 
-            const user = await User.findOne({ username });
+            const user = await User.findOne({ email });
 
             if (!user) {
                 errors.general = 'User not found';
@@ -48,12 +48,12 @@ module.exports = {
         async register(
             _, 
             { 
-                registerInput : { username, email, password, confirmPassword  }
+                registerInput : { name, email, password, confirmPassword  }
             }, 
             ) {
 
            const { valid, errors } = validateRegisterInput(
-               username, 
+               name, 
                email, 
                password, 
                confirmPassword
@@ -63,12 +63,12 @@ module.exports = {
                throw new UserInputError('Errors', { errors })
            }
 
-           const user = await User.findOne({ username });
+           const user = await User.findOne({ email });
 
            if (user) {
-                throw new UserInputError('Username is taken', {
+                throw new UserInputError('Email in use', {
                     errors: {
-                        username: 'This username is taken'
+                        email: 'Email in use'
                     }
                 })
            }
@@ -77,7 +77,7 @@ module.exports = {
 
            const newUser = new User({
                email,
-               username,
+               name,
                password,
                createdAt: new Date().toISOString()
            });
