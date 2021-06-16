@@ -5,6 +5,7 @@ const productSchema = new Schema({
     brand: String,
     price: Number,
     like: Boolean,
+    description: String,
 })
 
 module.exports = model('Product', productSchema);
