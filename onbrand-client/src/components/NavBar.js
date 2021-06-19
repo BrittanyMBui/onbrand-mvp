@@ -1,4 +1,4 @@
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText, Button } from 'reactstrap';
 
 function NavBar() {
 
@@ -18,6 +18,9 @@ function NavBar() {
                     </NavItem>
                     <NavItem>
                         <NavLink href='/login'>Login</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href='/signup'><Button outline color='secondary'>Signup</Button></NavLink>
                     </NavItem>
                 </Nav>
             </Navbar>
