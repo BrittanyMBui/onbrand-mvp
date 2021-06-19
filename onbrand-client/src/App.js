@@ -6,6 +6,7 @@ import './App.css';
 import Home from './pages/Home';
 import NavBar from './components/NavBar';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Route exact path='/' component={Home} />
       <Route exact path='/login' component={Login} />
+      <Route exact path='/signup' component={Signup} />
     </Router>
   );
 }
