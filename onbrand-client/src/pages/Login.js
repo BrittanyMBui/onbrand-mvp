@@ -14,6 +14,7 @@ function Login() {
                 <Label for="examplePassword">Password</Label>
                 <Input type="password" name="password" id="password" placeholder="password..." />
             </FormGroup>
+            <Button outline color ="primary">Log In</Button>
         </Form>
         </>
     )

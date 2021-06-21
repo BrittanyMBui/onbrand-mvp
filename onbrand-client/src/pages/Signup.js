@@ -18,6 +18,7 @@ function Signup() {
                 <Label for="examplePassword">Password</Label>
                 <Input type="password" name="password" id="password" placeholder="password..." />
             </FormGroup>
+            <Button outline color ="primary">Signup</Button>
         </Form>
         </>
     )
