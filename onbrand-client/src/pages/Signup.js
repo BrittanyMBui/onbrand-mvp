@@ -6,7 +6,7 @@ function Signup() {
         <>
         <h1>Signup</h1>
         <Form>
-            <FormGroup>
+            <FormGroup className="form">
                 <Label for='name'>name</Label>
                 <Input type="name" name="name" id="name" placeholder="name..." />
             </FormGroup>
