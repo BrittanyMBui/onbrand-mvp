@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import { AuthProvider } from './context/auth';
+import { AuthRoute } from './util/AuthRoute';
 import './App.css';
 
 import Home from './pages/Home';
@@ -10,12 +11,14 @@ import Signup from './pages/Signup';
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <Route exact path='/' component={Home} />
-      <Route exact path='/login' component={Login} />
-      <Route exact path='/signup' component={Signup} />
-    </Router>
+    <AuthProvider>
+      <Router>
+        <NavBar />
+        <Route exact path='/' component={Home} />
+        <AuthRoute exact path='/login' component={Login} />
+        <AuthRoute exact path='/signup' component={Signup} />
+      </Router>
+    </AuthProvider>
   );
 }
 
