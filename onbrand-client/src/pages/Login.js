@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 import { AuthContext } from '../context/auth';
 import { useForm } from '../util/hooks';
@@ -44,7 +44,7 @@ function Login(props) {
                     name="email" 
                     id="email" 
                     placeholder="email..."
-                    error={errors.email ? true: false }
+                    error={errors.email ? true : false }
                 />
             </FormGroup>
             <FormGroup>
