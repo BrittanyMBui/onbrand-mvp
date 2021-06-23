@@ -1,8 +1,12 @@
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText, Button } from 'reactstrap';
+import React, { useContext } from 'react';
+import { AuthContext } from '../context/auth';
 
 function NavBar() {
+    const { logout } = useContext(AuthContext)
 
     return(
+
         <div>
             <Navbar color='light' expand='md'>
                 <NavbarBrand href='/'>On Brand</NavbarBrand>
@@ -21,6 +25,9 @@ function NavBar() {
                     </NavItem>
                     <NavItem>
                         <NavLink href='/signup'><Button outline color='secondary'>Signup</Button></NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href='/' onClick={logout}>Logout</NavLink>
                     </NavItem>
                 </Nav>
             </Navbar>
