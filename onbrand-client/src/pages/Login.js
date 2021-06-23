@@ -16,17 +16,17 @@ function Login(props) {
     })
 
     const [loginUser, { loading }] = useMutation(LOGIN_USER, {
-        update(_, { data: { login: userData }}) {
+        update(_, { data: { login: userData }}){
             context.login(userData)
             props.history.push('/')
         },
-        onError(err) {
+        onError(err){
             setErrors(err.graphQLErrors[0].extensions.exception.errors);
         },
-        variables: values,
+        variables: values
     })
 
-    function loginUserCallback() {
+    function loginUserCallback(){
         loginUser();
     }
 
@@ -39,7 +39,7 @@ function Login(props) {
                 <Input
                     label="email"
                     value={values.email}
-                    onchange={onChange} 
+                    onChange={onChange} 
                     type="text" 
                     name="email" 
                     id="email" 
@@ -49,7 +49,14 @@ function Login(props) {
             </FormGroup>
             <FormGroup>
                 <Label for="examplePassword">Password</Label>
-                <Input type="password" name="password" id="password" placeholder="password..." />
+                <Input 
+                    type="password" 
+                    name="password" 
+                    id="password" 
+                    placeholder="password..."
+                    value={values.password}
+                    onChange={onChange}
+                />
             </FormGroup>
             <Button outline color ="primary" type="submit">Log In</Button>
         </Form>
