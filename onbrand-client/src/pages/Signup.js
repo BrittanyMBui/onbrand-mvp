@@ -20,7 +20,7 @@ function Signup(props) {
     const [addUser, { loading }] = useMutation(REGISTER_USER, {
         update(_, { data: { register: userData }}) {
             context.login(userData)
-            props.history.push('/')
+            props.history.push('/home')
         },
         onError(err) {
             setErrors(err.graphQLErrors[0].extensions.exceptions.errors);
@@ -76,10 +76,10 @@ function Signup(props) {
             <FormGroup className="form">
                 <Label for='confirmPassword'>confirm password</Label>
                 <Input
-                    type="confirmPassword" 
+                    type="password" 
                     name="confirmPassword" 
                     id="confirmPassword" 
-                    placeholder="confirmPassword..."
+                    placeholder="confirm password..."
                     value={values.confirmPassword}
                     onChange={onChange}
                     error={errors.confirmPassword ? true: false}                
