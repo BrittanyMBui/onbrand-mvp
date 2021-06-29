@@ -13,3 +13,8 @@
     margin: 6px;
     width: 300px;
 }
+
+.login {
+    background-color: #294f6b;
+    height: 100vh;
+}

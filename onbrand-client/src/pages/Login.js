@@ -31,7 +31,7 @@ function Login(props) {
     }
 
     return (
-        <>
+        <div className="login">
         <h1>Login</h1>
         <Form onSubmit={onSubmit}>
             <FormGroup>
@@ -60,7 +60,7 @@ function Login(props) {
             </FormGroup>
             <Button outline color ="primary" type="submit">Log In</Button>
         </Form>
-        </>
+        </div>
     )
 }
 
