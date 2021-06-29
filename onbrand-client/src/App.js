@@ -7,6 +7,7 @@ import './App.css';
 import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
 import NavBar from './components/NavBar';
+import AuthNavBar from './components/AuthNavBar';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
@@ -14,7 +15,7 @@ function App({ user }) {
   return (
     <AuthProvider>
       <Router>
-        <NavBar />
+        {user ? <AuthNavBar /> : <NavBar />}
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/home' component={Home} />
         <AuthRoute exact path='/login' component={Login} />

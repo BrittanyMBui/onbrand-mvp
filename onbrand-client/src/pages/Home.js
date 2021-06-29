@@ -8,10 +8,13 @@ function Home(props) {
     console.log(user);
 
     return (
-        <>
-        <h1>Welcome back, {user.name}</h1>
-        <p></p>
-        </>
+        <div className="home">
+        <h1>{user.name}'s Closet</h1>{' '}
+        <p>PANT SIZE</p>{' '}
+        <p>SHIRT SIZE</p>{' '}
+        <p>PANT FIT</p>{' '}
+        <p>SPEND</p>
+        </div>
     )
 }
 

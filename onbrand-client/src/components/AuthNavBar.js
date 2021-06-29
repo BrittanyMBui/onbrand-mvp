@@ -2,7 +2,7 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText, Button } from '
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/auth';
 
-function NavBar() {
+function AuthNavBar() {
     const { logout } = useContext(AuthContext)
 
     return(
@@ -20,12 +20,6 @@ function NavBar() {
                         <NavLink href='/about'>About</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href='/login'>Login</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href='/signup'><Button outline color='secondary'>Signup</Button></NavLink>
-                    </NavItem>
-                    <NavItem>
                         <NavLink href='/' onClick={logout}>Logout</NavLink>
                     </NavItem>
                 </Nav>
@@ -34,4 +28,4 @@ function NavBar() {
     )
 }
 
-export default NavBar;
+export default AuthNavBar;
