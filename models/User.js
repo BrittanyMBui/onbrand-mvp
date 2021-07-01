@@ -5,10 +5,10 @@ const userSchema = new Schema({
     password: String,
     email: String,
     createdAt: String,
-    // pantSize: String,
-    // pantFit: String,
-    // shirtSize: String,
-    // spend: String,
+    pantSize: String,
+    pantFit: String,
+    shirtSize: String,
+    spend: String,
 })
 
 module.exports = model('User', userSchema);

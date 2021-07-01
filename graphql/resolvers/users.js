@@ -48,7 +48,7 @@ module.exports = {
         async register(
             _, 
             { 
-                registerInput : { name, email, password, confirmPassword }
+                registerInput : { name, email, password, confirmPassword, pantSize, pantFit, spend, shirtSize }
             }, 
             ) {
 
@@ -79,10 +79,10 @@ module.exports = {
                email,
                name,
                password,
-            //    pantSize,
-            //    shirtSize,
-            //    pantFit,
-            //    spend
+               pantSize,
+               shirtSize,
+               pantFit,
+               spend
            });
 
            const res = await newUser.save();

@@ -7,20 +7,20 @@ type User {
     token: String!
     name: String!
     createdAt: String!
-    # pantSize: String!
-    # pantFit: String!
-    # shirtSize: String!
-    # spend: String!
+    pantSize: String
+    pantFit: String
+    shirtSize: String
+    spend: String
 }
 input RegisterInput {
     name: String!
     password: String!
     confirmPassword: String!
     email: String!
-    # pantSize: String!
-    # pantFit: String!
-    # shirtSize: String!
-    # spend: String!
+    pantSize: String
+    pantFit: String
+    shirtSize: String
+    spend: String
 }
 type Mutation {
     register(registerInput: RegisterInput): User!
