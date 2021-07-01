@@ -8,7 +8,7 @@ function generateToken(user) {
     return jwt.sign({
         id: user.id,
         email: user.email,
-        name: user.name
+        name: user.name,
     }, process.env.SECRET_KEY, { expiresIn: '7d' });
 };
 
@@ -48,7 +48,7 @@ module.exports = {
         async register(
             _, 
             { 
-                registerInput : { name, email, password, confirmPassword  }
+                registerInput : { name, email, password, confirmPassword }
             }, 
             ) {
 
@@ -79,6 +79,10 @@ module.exports = {
                email,
                name,
                password,
+            //    pantSize,
+            //    shirtSize,
+            //    pantFit,
+            //    spend
            });
 
            const res = await newUser.save();

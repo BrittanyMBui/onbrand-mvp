@@ -8,7 +8,7 @@ import { useForm } from '../util/hooks';
 
 function Signup(props) {
     const context = useContext(AuthContext)
-    const [ errors, setErrors ] = useState({});
+    // const [ errors, setErrors ] = useState({});
 
     const { onChange, onSubmit, values } = useForm(registeredUser, {
         name: '',
@@ -22,9 +22,9 @@ function Signup(props) {
             context.login(userData)
             props.history.push('/home')
         },
-        onError(err) {
-            setErrors(err.graphQLErrors[0].extensions.exceptions.errors);
-        },
+        // onError(err) {
+        //     setErrors(err.graphQLErrors[0].extensions.exceptions.errors);
+        // },
         variables: values
     })
 
@@ -35,7 +35,7 @@ function Signup(props) {
     return(
         <>
         <h1>Signup</h1>
-        <Form onSubmit={onSubmit} className={loading ? 'loading' : '' }>
+        <Form onSubmit={onSubmit} noValidate className={loading ? 'loading' : '' }>
             <FormGroup className="form">
                 <Label for='name'>name</Label>
                 <Input
@@ -45,7 +45,7 @@ function Signup(props) {
                     placeholder="name..."
                     value={values.name}
                     onChange={onChange}
-                    error={errors.name ? true: false}                
+                    // error={errors.name ? true : false}                
                 />
             </FormGroup>
             <FormGroup>
@@ -58,7 +58,7 @@ function Signup(props) {
                     name="email" 
                     id="email" 
                     placeholder="email..."
-                    error={errors.email ? true : false }
+                    // error={errors.email ? true : false }
                 />
             </FormGroup>
             <FormGroup className="form">
@@ -70,7 +70,7 @@ function Signup(props) {
                     placeholder="password..."
                     value={values.password}
                     onChange={onChange}
-                    error={errors.password ? true: false}            
+                    // error={errors.password ? true : false}            
                 />
             </FormGroup>
             <FormGroup className="form">
@@ -82,9 +82,57 @@ function Signup(props) {
                     placeholder="confirm password..."
                     value={values.confirmPassword}
                     onChange={onChange}
-                    error={errors.confirmPassword ? true: false}                
+                    // error={errors.confirmPassword ? true : false}                
                 />
             </FormGroup>
+            {/* <FormGroup>
+                <Label for='pantSize'>Pant Size</Label>
+                <Input
+                    label="pantSize"
+                    value={values.pantSize}
+                    onChange={onChange} 
+                    type="text" 
+                    name="pantSize" 
+                    id="pantSize" 
+                    placeholder="pant size..."
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for='shirtSize'>Shirt Size</Label>
+                <Input
+                    label="shirtSize"
+                    value={values.shirtSize}
+                    onChange={onChange} 
+                    type="text" 
+                    name="shirtSize" 
+                    id="shirtSize" 
+                    placeholder="shirt size..."
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for='pantFit'>Pant Fit</Label>
+                <Input
+                    label="pantFit"
+                    value={values.pantFit}
+                    onChange={onChange} 
+                    type="text" 
+                    name="pantFit" 
+                    id="pantFit" 
+                    placeholder="pant fit..."
+                />
+            </FormGroup>
+            <FormGroup>
+                <Label for='spend'>Spend</Label>
+                <Input
+                    label="spend"
+                    value={values.spend}
+                    onChange={onChange} 
+                    type="text" 
+                    name="spend" 
+                    id="spend" 
+                    placeholder="spend..."
+                />
+            </FormGroup> */}
             <Button outline color ="primary">Signup</Button>
         </Form>
         </>
@@ -97,6 +145,10 @@ mutation register(
     $email: String!
     $password: String!
     $confirmPassword: String!
+    # $pantSize: String!
+    # $shirtSize: String!
+    # $pantFit: String!
+    # $spend: String!
 ) {
     register(
         registerInput: {
@@ -104,12 +156,20 @@ mutation register(
             email: $email
             password: $password
             confirmPassword: $confirmPassword
+            # pantSize: $pantSize
+            # shirtSize: $shirtSize
+            # pantFit: $pantFit
+            # spend: $spend
         }
     ) {
         id
         email
         name
         token
+        # pantSize
+        # shirtSize
+        # pantFit
+        # spend
     }
 }
 `

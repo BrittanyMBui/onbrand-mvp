@@ -8,7 +8,7 @@ import { useForm } from '../util/hooks';
 
 function Login(props) {
     const context = useContext(AuthContext)
-    const [errors, setErrors] = useState({})
+    // const [errors, setErrors] = useState({})
 
     const { onChange, onSubmit, values } = useForm(loginUserCallback, {
         email: '',
@@ -20,9 +20,9 @@ function Login(props) {
             context.login(userData)
             props.history.push('/home')
         },
-        onError(err){
-            setErrors(err.graphQLErrors[0].extensions.exception.errors);
-        },
+        // onError(err){
+        //     setErrors(err.graphQLErrors[0].extensions.exception.errors);
+        // },
         variables: values
     })
 
@@ -44,7 +44,7 @@ function Login(props) {
                     name="email" 
                     id="email" 
                     placeholder="email..."
-                    error={errors.email ? true : false }
+                    // error={errors.email ? true : false }
                 />
             </FormGroup>
             <FormGroup>
@@ -78,6 +78,10 @@ mutation login(
             email
             name
             token
+            # pantSize
+            # pantFit
+            # shirtSize
+            # spend
         }
     }
 `
