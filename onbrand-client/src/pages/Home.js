@@ -11,12 +11,17 @@ function Home(props) {
         <div className="home">
         <h1>{user.name}'s Closet</h1>
         <p>PANT SIZE
-            {user.pantSize}
-        <br />
+        <br />{user.pantSize}
         </p>
-        <p>SHIRT SIZE</p>
-        <p>PANT FIT</p>
-        <p>SPEND</p>
+        <p>SHIRT SIZE
+            <br />{user.shirtSize}
+        </p>
+        <p>PANT FIT
+            <br />{user.pantFit}
+        </p>
+        <p>SPEND
+            <br />{user.spend}
+        </p>
         </div>
     )
 }
