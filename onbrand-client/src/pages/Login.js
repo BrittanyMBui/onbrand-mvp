@@ -78,10 +78,10 @@ mutation login(
             email
             name
             token
-            # pantSize
-            # pantFit
-            # shirtSize
-            # spend
+            pantSize
+            pantFit
+            shirtSize
+            spend
         }
     }
 `

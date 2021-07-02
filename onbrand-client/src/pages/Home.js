@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 
+
 import { AuthContext } from '../context/auth';
 
 function Home(props) {
@@ -9,7 +10,10 @@ function Home(props) {
     return (
         <div className="home">
         <h1>{user.name}'s Closet</h1>
-        <p>PANT SIZE</p>
+        <p>PANT SIZE
+            {user.pantSize}
+        <br />
+        </p>
         <p>SHIRT SIZE</p>
         <p>PANT FIT</p>
         <p>SPEND</p>
