@@ -2,15 +2,17 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText, Button } from '
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/auth';
 
+import onbrand2b from '../onbrand2b.png';
+
 function NavBar() {
     const { logout } = useContext(AuthContext)
 
     return(
         <div>
-            <Navbar color='light' expand='md'>
-                <NavbarBrand href='/'>On Brand</NavbarBrand>
+            <Navbar color="dark" expand='md'>
+                <NavbarBrand href='/home'><img src={onbrand2b} alt="on brand" className="onbrandlogo" /></NavbarBrand>
                 <Nav className='mr-auto' navbar>
-                    <NavItem>
+                    {/* <NavItem>
                         <NavLink href='/blog'>Blog</NavLink>
                     </NavItem>
                     <NavItem>
@@ -18,7 +20,7 @@ function NavBar() {
                     </NavItem>
                     <NavItem>
                         <NavLink href='/about'>About</NavLink>
-                    </NavItem>
+                    </NavItem> */}
                     <NavItem>
                         <NavLink href='/login'>Login</NavLink>
                     </NavItem>

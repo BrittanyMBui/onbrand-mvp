@@ -18,3 +18,8 @@
     /* background-color: #294f6b; */
     height: 100vh;
 }
+
+.onbrandlogo {
+    max-height: 84px;
+    max-width: 204px;
+}
