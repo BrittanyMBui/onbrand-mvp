@@ -15,11 +15,16 @@
 }
 
 .login {
-    /* background-color: #294f6b; */
+    background-color: #294f6b;
     height: 100vh;
 }
 
 .onbrandlogo {
     max-height: 84px;
     max-width: 204px;
+}
+
+.onBrandLogin {
+    max-height: 173px;
+    max-width: 420px;
 }

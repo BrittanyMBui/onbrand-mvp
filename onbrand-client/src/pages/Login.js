@@ -5,6 +5,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 import { AuthContext } from '../context/auth';
 import { useForm } from '../util/hooks';
+import onbrand2b from '../onbrand2b.png';
 
 function Login(props) {
     const context = useContext(AuthContext)
@@ -32,7 +33,7 @@ function Login(props) {
 
     return (
         <div className="login">
-        <h1>Login</h1>
+        <img src={onbrand2b} alt="on brand logo" className="onBrandLogin" />
         <Form onSubmit={onSubmit}>
             <FormGroup>
                 <Label for='email'>email</Label>
