@@ -12,6 +12,29 @@ type User {
     shirtSize: String
     spend: String
 }
+type Product {
+    id: ID!
+    productName: String!
+    brand: String!
+    category: String!
+    brandType: String!
+    url: String!
+    img: String!
+    price: Number!
+    like: Boolean
+    description: String
+}
+input ProductInput {
+    productName: String!
+    brand: String!
+    category: String!
+    brandType: String!
+    url: String!
+    img: String!
+    price: Number!
+    like: Boolean
+    description: String
+}
 input RegisterInput {
     name: String!
     password: String!
@@ -28,5 +51,6 @@ type Mutation {
 }
 type Query {
     users: [User]
+    products: [Product]
 }
 `;
