@@ -21,7 +21,8 @@ type Product {
     url: String!
     img: String!
     price: Number!
-    like: Boolean
+    liked: Boolean
+    disliked: Boolean
     description: String
 }
 input ProductInput {
@@ -32,7 +33,8 @@ input ProductInput {
     url: String!
     img: String!
     price: Number!
-    like: Boolean
+    liked: Boolean
+    disliked: Boolean
     description: String
 }
 input RegisterInput {

@@ -8,7 +8,8 @@ const productSchema = new Schema({
     url: String,
     img: String,
     price: Number,
-    like: Boolean,
+    liked: Boolean,
+    disliked: Boolean,
     description: String,
 })
 
