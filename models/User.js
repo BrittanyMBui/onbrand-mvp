@@ -9,6 +9,12 @@ const userSchema = new Schema({
     pantFit: String,
     shirtSize: String,
     spend: String,
+    products: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'products'
+        }
+    ]
 })
 
 module.exports = model('User', userSchema);

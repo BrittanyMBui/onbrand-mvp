@@ -20,7 +20,7 @@ type Product {
     brandType: String!
     url: String!
     img: String!
-    price: Number!
+    price: Int!
     liked: Boolean
     disliked: Boolean
     description: String
@@ -32,7 +32,7 @@ input ProductInput {
     brandType: String!
     url: String!
     img: String!
-    price: Number!
+    price: Int!
     liked: Boolean
     disliked: Boolean
     description: String
