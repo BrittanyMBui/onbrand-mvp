@@ -6,7 +6,7 @@
 .home {
     margin: 4px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
 .form-group {
