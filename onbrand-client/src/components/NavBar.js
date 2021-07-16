@@ -1,4 +1,4 @@
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarText, Button } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button } from 'reactstrap';
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/auth';
 
