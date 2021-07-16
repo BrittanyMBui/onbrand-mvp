@@ -57,5 +57,7 @@ type Mutation {
 type Query {
     users: [User]
     products: [Product]
+    getProducts: [Product]
+    getProduct(productId: ID!): Product
 }
 `;
