@@ -14,6 +14,7 @@ type User {
 }
 type Product {
     id: ID!
+    # user: String!
     productName: String!
     brand: String!
     category: String!
@@ -26,6 +27,7 @@ type Product {
     description: String
 }
 input ProductInput {
+    # user: String!
     productName: String!
     brand: String!
     category: String!
