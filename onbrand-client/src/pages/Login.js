@@ -33,6 +33,7 @@ function Login(props) {
 
     return (
         <div className="login">
+        <div className="login-box">
         <img src={onbrand2b} alt="on brand logo" className="onBrandLogin" />
         <Form onSubmit={onSubmit}>
             <FormGroup>
@@ -61,6 +62,7 @@ function Login(props) {
             </FormGroup>
             <Button outline color ="primary" type="submit">Log In</Button>
         </Form>
+        </div>
         </div>
     )
 }

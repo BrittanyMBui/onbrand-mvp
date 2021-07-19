@@ -17,7 +17,12 @@
 .login {
     background-color: #294f6b;
     height: 100vh;
+    display: flex;
+    align-items: center;
 }
+
+/* .login-box {
+} */
 
 .onbrandlogo {
     max-height: 84px;
