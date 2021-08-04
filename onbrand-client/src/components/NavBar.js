@@ -10,7 +10,7 @@ function NavBar() {
     return(
         <div>
             <Navbar color="dark" expand='md'>
-                <NavbarBrand href='/home'><img src={onbrand2b} alt="on brand" className="onbrandlogo" /></NavbarBrand>
+                <NavbarBrand href='/'><img src={onbrand2b} alt="on brand" className="onbrandlogo" /></NavbarBrand>
                 <Nav className='mr-auto' navbar>
                     {/* <NavItem>
                         <NavLink href='/blog'>Blog</NavLink>

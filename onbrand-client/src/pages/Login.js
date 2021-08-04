@@ -61,6 +61,7 @@ function Login(props) {
                 />
             </FormGroup>
             <Button outline color ="primary" type="submit">Log In</Button>
+            <br /><a href='https://kellogg.qualtrics.com/jfe/forms/SV_9HNVfyql1C3IY35z'>New user? Click here to sign up!</a>
         </Form>
         </div>
         </div>
