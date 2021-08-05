@@ -19,10 +19,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-
-/* .login-box {
-} */
 
 .onbrandlogo {
     max-height: 84px;
@@ -32,4 +30,10 @@
 .onBrandLogin {
     max-height: 173px;
     max-width: 420px;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

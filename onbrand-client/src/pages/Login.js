@@ -37,7 +37,7 @@ function Login(props) {
         <img src={onbrand2b} alt="on brand logo" className="onBrandLogin" />
         <Form onSubmit={onSubmit}>
             <FormGroup>
-                <Label for='email'>email</Label>
+                <Label for='email'>Email</Label>
                 <Input
                     label="email"
                     value={values.email}
@@ -60,7 +60,9 @@ function Login(props) {
                     onChange={onChange}
                 />
             </FormGroup>
-            <Button outline color ="primary" type="submit">Log In</Button>
+            <div className="login-btn">
+                <Button outline color ="primary" type="submit">Log In</Button>
+            </div>
             <br /><a href='https://kellogg.qualtrics.com/jfe/forms/SV_9HNVfyql1C3IY35z'>New user? Click here to sign up!</a>
         </Form>
         </div>
