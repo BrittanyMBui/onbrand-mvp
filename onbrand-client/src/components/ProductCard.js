@@ -1,10 +1,19 @@
 import React, { useContext } from 'react';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
-
-function ProductCard() {
+function ProductCard({ product: { productName, brand, category, brandType, url, img, price }}) {
 
     return(
-        <h1>Product Card</h1>
+        <div>
+            <Card>
+                <CardImg src={img} alt="product image" />
+                <CardBody>
+                    <CardTitle>{productName}</CardTitle>
+                    <CardSubtitle>{brand}</CardSubtitle>
+                    <CardSubtitle>${price}</CardSubtitle>
+                </CardBody>
+            </Card>
+        </div>
     )
 }
 
