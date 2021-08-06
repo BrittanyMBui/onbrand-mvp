@@ -33,39 +33,41 @@ function Login(props) {
 
     return (
         <div className="login">
-        <div className="login-box">
-        <img src={onbrand2b} alt="on brand logo" className="onBrandLogin" />
-        <Form onSubmit={onSubmit}>
-            <FormGroup>
-                <Label for='email'>Email</Label>
-                <Input
-                    label="email"
-                    value={values.email}
-                    onChange={onChange} 
-                    type="text" 
-                    name="email" 
-                    id="email" 
-                    placeholder="email..."
-                    // error={errors.email ? true : false }
-                />
-            </FormGroup>
-            <FormGroup>
-                <Label for="examplePassword">Password</Label>
-                <Input 
-                    type="password" 
-                    name="password" 
-                    id="password" 
-                    placeholder="password..."
-                    value={values.password}
-                    onChange={onChange}
-                />
-            </FormGroup>
-            <div className="login-btn">
-                <Button outline color ="primary" type="submit">Log In</Button>
+            <div className="login-box">
+            <img src={onbrand2b} alt="on brand logo" className="onBrandLogin" />
+                <div className="form-box">
+                <Form onSubmit={onSubmit}>
+                    <FormGroup>
+                        <Label for='email'>Email</Label>
+                        <Input
+                            label="email"
+                            value={values.email}
+                            onChange={onChange} 
+                            type="text" 
+                            name="email" 
+                            id="email" 
+                            placeholder="email..."
+                            // error={errors.email ? true : false }
+                        />
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="examplePassword">Password</Label>
+                        <Input 
+                            type="password" 
+                            name="password" 
+                            id="password" 
+                            placeholder="password..."
+                            value={values.password}
+                            onChange={onChange}
+                        />
+                    </FormGroup>
+                    <div className="login-btn">
+                        <Button outline color ="primary" type="submit">Log In</Button>
+                    </div>
+                    <br /><a href='https://kellogg.qualtrics.com/jfe/forms/SV_9HNVfyql1C3IY35z'>New user? Click here to sign up!</a>
+                </Form>
+                </div>
             </div>
-            <br /><a href='https://kellogg.qualtrics.com/jfe/forms/SV_9HNVfyql1C3IY35z'>New user? Click here to sign up!</a>
-        </Form>
-        </div>
         </div>
     )
 }
