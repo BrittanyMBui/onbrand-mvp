@@ -9,7 +9,7 @@ function generateToken(user) {
         id: user.id,
         email: user.email,
         name: user.name,
-    }, process.env.SECRET_KEY, { expiresIn: '1d' });
+    }, process.env.SECRET_KEY, { expiresIn: '2d' });
 };
 
 module.exports = {

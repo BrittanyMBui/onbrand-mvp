@@ -9,7 +9,7 @@ function UserInfo() {
     console.log(user);
 
     return (
-        <>
+        <div className="user-info">
         <h1>{user.name}'s Closet</h1>
         <p>PANT SIZE
         <br />{user.pantSize}
@@ -23,7 +23,7 @@ function UserInfo() {
         <p>SPEND
             <br />{user.spend}
         </p>
-        </>
+        </div>
     )
 }
 
