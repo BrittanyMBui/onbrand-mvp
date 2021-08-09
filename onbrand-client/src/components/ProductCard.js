@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } fr
 function ProductCard({ product: { productName, brand, category, brandType, url, img, price }}) {
 
     return(
-        <div> 
+        <a href="/" className="product-card"> 
             <Card>
                 <CardImg src={img} alt="product image" />
                 <CardBody>
@@ -13,7 +13,7 @@ function ProductCard({ product: { productName, brand, category, brandType, url, 
                     <CardSubtitle>${price}</CardSubtitle>
                 </CardBody>
             </Card>
-        </div>
+        </a>
     )
 }
 
