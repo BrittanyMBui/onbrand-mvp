@@ -5,7 +5,7 @@ import { AuthContext } from '../context/auth';
 import onbrand2b from '../onbrand2b.png';
 
 function NavBar() {
-    const { logout } = useContext(AuthContext)
+    const { logout, user } = useContext(AuthContext)
 
     return(
         <div>
@@ -24,10 +24,10 @@ function NavBar() {
                     <NavItem>
                         <NavLink href='/login'>Login</NavLink>
                     </NavItem>
-                    <NavItem>
+                    {/* <NavItem>
                         <NavLink href='/signup'><Button outline color='secondary'>Signup</Button></NavLink>
-                    </NavItem>
-                    <NavItem>
+                    </NavItem> */}
+                    <NavItem style={{display: user ? 'block' : 'none'}}>
                         <NavLink href='/' onClick={logout}>Logout</NavLink>
                     </NavItem>
                 </Nav>
