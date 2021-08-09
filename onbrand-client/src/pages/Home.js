@@ -4,12 +4,15 @@ import { useQuery } from '@apollo/client';
 import { FETCH_PRODUCTS_QUERY } from '../util/graphql';
 import { Container, Row, Col } from 'reactstrap';
 
+import SideBar from '../components/SideBar';
+
 function Home(props) {
     const { loading, error, data } = useQuery(FETCH_PRODUCTS_QUERY);
 
     return (
         <div className="home">
             <UserInfo />
+            <SideBar />
             <div className="product-card">
                 { loading ? (
                     <h1>Loading Products..</h1>

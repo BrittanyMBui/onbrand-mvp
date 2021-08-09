@@ -12,21 +12,9 @@ function NavBar() {
             <Navbar color="dark" expand='md'>
                 <NavbarBrand href='/'><img src={onbrand2b} alt="on brand" className="onbrandlogo" /></NavbarBrand>
                 <Nav className='mr-auto' navbar>
-                    {/* <NavItem>
-                        <NavLink href='/blog'>Blog</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href='/faqs'>FAQs</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href='/about'>About</NavLink>
-                    </NavItem> */}
                     <NavItem style={{display: !user ? 'block' : 'none'}}>
                         <NavLink href='/login'>Login</NavLink>
                     </NavItem>
-                    {/* <NavItem>
-                        <NavLink href='/signup'><Button outline color='secondary'>Signup</Button></NavLink>
-                    </NavItem> */}
                     <NavItem style={{display: user ? 'block' : 'none'}}>
                         <NavLink href='/' onClick={logout}>Logout</NavLink>
                     </NavItem>

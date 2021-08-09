@@ -17,8 +17,9 @@ function App() {
     <AuthProvider>
       <Router>
         <NavBar />
-        {user ? <Route path='/home' component={Home} /> : <Redirect to="/login" />}
-        {/* <Route exact path='/home' component={Home} /> */}
+        <Route exact path="/" component={LandingPage} />
+        {/* {user ? <Route path='/home' component={Home} /> : <Redirect to="/login" />} */}
+        <Route exact path='/home' component={Home} />
         <AuthRoute exact path='/login' component={Login} />
         <AuthRoute exact path='/signup' component={Signup} />
       </Router>
