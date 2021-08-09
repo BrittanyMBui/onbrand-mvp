@@ -21,7 +21,7 @@ function NavBar() {
                     <NavItem>
                         <NavLink href='/about'>About</NavLink>
                     </NavItem> */}
-                    <NavItem>
+                    <NavItem style={{display: !user ? 'block' : 'none'}}>
                         <NavLink href='/login'>Login</NavLink>
                     </NavItem>
                     {/* <NavItem>
