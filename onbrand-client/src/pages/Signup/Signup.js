@@ -3,8 +3,8 @@ import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-import { AuthContext } from '../context/auth';
-import { useForm } from '../util/hooks';
+import { AuthContext } from '../../context/auth';
+import { useForm } from '../../util/hooks';
 
 function Signup(props) {
     const context = useContext(AuthContext)
