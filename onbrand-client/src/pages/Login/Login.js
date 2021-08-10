@@ -3,9 +3,11 @@ import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-import { AuthContext } from '../context/auth';
-import { useForm } from '../util/hooks';
-import onbrand2b from '../onbrand2b.png';
+import { AuthContext } from '../../context/auth';
+import { useForm } from '../../util/hooks';
+import onbrand2b from '../../onbrand2b.png';
+
+import './Login.styles.scss';
 
 function Login(props) {
     const context = useContext(AuthContext)
@@ -46,7 +48,7 @@ function Login(props) {
                             type="text" 
                             name="email" 
                             id="email" 
-                            placeholder="email..."
+                            placeholder=""
                             // error={errors.email ? true : false }
                         />
                     </FormGroup>
@@ -56,15 +58,15 @@ function Login(props) {
                             type="password" 
                             name="password" 
                             id="password" 
-                            placeholder="password..."
+                            placeholder=""
                             value={values.password}
                             onChange={onChange}
                         />
                     </FormGroup>
-                    <div className="login-btn">
-                        <Button outline color ="primary" type="submit">Log In</Button>
+                    <div className="login-btn rounded-0">
+                        <Button className='loginBtn' outline color="warning" type="submit">Log In</Button>
                     </div>
-                    <br /><a href='https://kellogg.qualtrics.com/jfe/forms/SV_9HNVfyql1C3IY35z'>New user? Click here to sign up!</a>
+                    <br /><a className='newUser' href='https://kellogg.qualtrics.com/jfe/forms/SV_9HNVfyql1C3IY35z'>New user? Click here to sign up!</a>
                 </Form>
                 </div>
             </div>

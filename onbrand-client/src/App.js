@@ -7,7 +7,7 @@ import './App.css';
 import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
 import NavBar from './components/NavBar';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Signup from './pages/Signup';
 
 function App() {

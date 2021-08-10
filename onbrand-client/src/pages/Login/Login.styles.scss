@@ -1,0 +1,48 @@
+.login {
+  background-color: #294f6b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.onBrandLogin {
+  max-height: 173px;
+  max-width: 420px;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  color: #3E596A !important;
+}
+
+.loginBtn,
+.loginBtn:active,
+.loginBtn:focus,
+.loginBtn:hover {
+  background-color: #D0A363 !important;
+  color: #294F6B !important;
+  font-size: 15px !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  width: 100px;
+}
+
+.form-box {
+  background-color: #c4c4c4;
+}
+
+.form-box {
+  padding: 10px 50px;
+}
+
+.newUser {
+  display: block;
+  text-decoration: none;
+  color: #294F6B;
+  text-align: center;
+}
