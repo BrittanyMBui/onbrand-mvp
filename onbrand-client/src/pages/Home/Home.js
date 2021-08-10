@@ -1,10 +1,10 @@
-import UserInfo from '../components/UserInfo';
-import ProductCard from '../components/ProductCard';
+import UserInfo from '../../components/UserInfo';
+import ProductCard from '../../components/ProductCard';
 import { useQuery } from '@apollo/client';
-import { FETCH_PRODUCTS_QUERY } from '../util/graphql';
+import { FETCH_PRODUCTS_QUERY } from '../../util/graphql';
 import { Container, Row, Col } from 'reactstrap';
 
-import SideBar from '../components/SideBar';
+import SideBar from '../../components/SideBar';
 
 function Home(props) {
     const { loading, error, data } = useQuery(FETCH_PRODUCTS_QUERY);

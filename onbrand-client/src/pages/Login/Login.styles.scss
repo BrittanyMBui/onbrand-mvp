@@ -1,0 +1,40 @@
+.form-group {
+  padding-top: 10px;
+  margin: auto;
+  width: 300px;
+}
+
+Label {
+  font-weight: bold;
+}
+
+.login-btn {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  color: #3E596A !important;
+  font-weight: bold;
+}
+
+.loginBtn,
+.loginBtn:active,
+.loginBtn:focus,
+.loginBtn:hover {
+  color: #152938 !important;
+  background-color: #D0A363;
+  font-size: 18px !important;
+  font-weight: bolder !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  width: 130px;
+}
+
+.login-box a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
