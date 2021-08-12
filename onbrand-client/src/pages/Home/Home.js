@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import { FETCH_PRODUCTS_QUERY } from '../../util/graphql';
 import { Container, Row, Col } from 'reactstrap';
 
+import './Home.styles.scss';
 import SideBar from '../../components/SideBar';
 
 function Home(props) {
@@ -12,8 +13,8 @@ function Home(props) {
     return (
         <div className="home">
             <UserInfo />
-            <SideBar />
-            <div className="product-card">
+            <SideBar lg="4" />
+            <div className="product-card" lg="8">
                 { loading ? (
                     <h1>Loading Products..</h1>
                 ) : (
