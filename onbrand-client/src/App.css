@@ -2,17 +2,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.landing-page {
-    margin: 4px;
-    text-align: center;
-}
-
-.home {
-    margin: 4px;
-    display: flex;
-    flex-direction: column;
-}
-
 .user-info {
     display: flex;
     justify-content: space-around;

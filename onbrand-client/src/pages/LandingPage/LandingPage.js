@@ -1,3 +1,4 @@
+import './LandingPage.styles.scss';
 
 function LandingPage() {
     return(
