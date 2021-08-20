@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler } f
 import { AuthContext } from '../../context/auth';
 
 import onbrand2b from '../../onbrand2b.png';
+import Search from '../Search';
 import './NavBar.styles.scss';
 
 function NavBar() {
@@ -29,6 +30,9 @@ function NavBar() {
             </NavItem>
           </Nav>
         </Collapse>
+        <NavItem>
+          <Search />
+        </NavItem>
       </Navbar>
     </div>
   )
