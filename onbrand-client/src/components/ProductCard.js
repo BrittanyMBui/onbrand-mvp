@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } fr
 function ProductCard({ product: { productName, brand, category, brandType, url, img, price }}) {
 
     return(
-        <a href="/" className="product-card"> 
+        <a href='/' className="product-card"> 
             <Card>
                 <CardImg src={img} alt="product image" />
                 <CardBody>
