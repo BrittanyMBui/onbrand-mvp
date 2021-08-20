@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+--------------------------- HOW TO RUN APPLICATION LOCALLY ---------------------------------------
+GraphQL playground can be accessed at localhost:4000 - run npm start from root
+UI can be accessed at localhost:3000 - run npm start from client
